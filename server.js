@@ -9,7 +9,7 @@ app.use(cors());
 app.use(express.json())
 app.use(require('./server/routes/index'));
 
-process.env.PORT =  3500;
+process.env.PORT =  process.env.PORT || 3500;
 
 app.get('/',function(req,res){
 console.log("hola")
